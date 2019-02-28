@@ -16,20 +16,18 @@ void setup() {
   digitalWrite(LEDW_PIN, LOW);
   digitalWrite(LEDY_PIN, LOW);
 
-  // Intialize the logging framework
   Serial.begin(115200);     // Initialize serial port
-  Serial.setTimeout(10000); // Timeout for read
 
 }
 
 void loop() {
 
   toggle = !toggle;
+
+  Serial.printf("Now: %d\n", (int)toggle);
   digitalWrite(LEDR_PIN, toggle);
   digitalWrite(LEDW_PIN, toggle);
   digitalWrite(LEDY_PIN, toggle);
-
-  Serial.printf("Now:", (int)toggle);
 
   delay(1 * 1000);
 }
