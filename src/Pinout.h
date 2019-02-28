@@ -24,7 +24,7 @@
 
 // NODEMCU based on ESP8266 (human names)
 
-#define PIN_D0 GPIO16_PIN // working as OUTPUT, breaks deep sleep mode, NODE-MCU built-in !LED
+#define PIN_D0 GPIO16_PIN // working as OUTPUT, do not use if deep sleep mode, NODE-MCU built-in !LED
 #define PIN_D1 GPIO5_PIN
 #define PIN_D2 GPIO4_PIN
 #define PIN_D3 GPIO0_PIN  // working as OUTPUT
@@ -39,7 +39,7 @@
 #define PIN_D12 GPIO10_PIN // SDD3 / SD3 // can be used as input only
 
 // LEDS
-#define LEDY_PIN PIN_D0 // YELLOW LED // 1 off, 0 on
+#define LEDY_PIN PIN_D2 // YELLOW LED
 #define LEDW_PIN PIN_D3 // WHITE LED
 #define LEDR_PIN PIN_D4 // RED LED
 
