@@ -8,7 +8,6 @@ void setup() {
   delay(2 * 1000);
 
   // Setup pins
-  log(CLASS_MAIN, Debug, "Setup pins");
   pinMode(LEDR_PIN, OUTPUT);
   pinMode(LEDW_PIN, OUTPUT);
   pinMode(LEDY_PIN, OUTPUT);
@@ -30,7 +29,7 @@ void loop() {
   digitalWrite(LEDW_PIN, toggle);
   digitalWrite(LEDY_PIN, toggle);
 
-  Serial.println("Now: %d", (int)toggle);
+  Serial.printf("Now:", (int)toggle);
 
   delay(1 * 1000);
 }
